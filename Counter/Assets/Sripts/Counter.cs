@@ -43,9 +43,9 @@ public class Counter : MonoBehaviour
 
         while (enabled)
         {
+            yield return delay;
             _value++;
             ValueChanged?.Invoke(_value);
-            yield return delay;
         }
     }
 }
